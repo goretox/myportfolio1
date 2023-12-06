@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Verdugo Facundo Personal portfolio Html</title>
+    <meta name="description" content="Verdugo Facundo  theme description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="20x20" href="./icons/portfolio.png">
+    <!--CSS HERE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/estilos.css">
+    <!--Termina css HERE-->
+
+    <!--Estilos -->
+  </head>
+
+  <body>
+    <!-- ESTRUCTURA #1 HEADER-NAV -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="wrapper">
+      <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <h2>F<span>V</span></h2>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#articles">Articles</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!--ESTRUCTURA #2 MAIN SECTIONS- ARTICLES-DIVS-ASIDES -->
+      <main class="main">
+
+        <div class="info-content">
+          <div class="about-facu">
+            <h1> I'm <span>Facundo</span>Verdugo</h1>
+            <p>
+              Hello, my name is Facundo Verdugo,
+              I'm starting with web design, my goal is to be a backend programmer.
+              I want to start as a freelancer and put together some projects
+            </p>
+            <a download href="#">
+              <button class="download">Download</button>
+            </a>
+          </div>
+        
+          <!--------------------- ABOUT ME  ----------------->
+          <div id="about" class="about-info">
+            <img src="images/imagen portfolio.jpg" alt="imagen de Facu">
+            <div>
+              <h2>About me</h2>
+              <p>Hello, my name is Facundo Verdugo, I am 24 years old, I am from Mendoza, Argentina.</p>
+              <p> For now I dedicate myself to the frontend,
+                my tools are <strong>html css and javascript.</strong></p>
+  
+              <button class="download">Read more</button>
+            </div>
+          </div>
+        </div>
+
+        
+        <!-------------AQUI TERMINA ABOUT ME---------------->
+
+        <!--------------------PORTFOLIO--------------------->
+        <div class="portfolio" id="portfolio">
+          <div class="portfolio-heading">
+            <h2>My Portfolio</h2>
+
+            <div class="card" style="width: 18rem;">
+              <img src="images/project image.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Project details</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+              <img src="images/project image.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Project details</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+              <img src="images/project image.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Project details</a>
+              </div>
+            </div>
+
+          </div>
+        <!---------------AQUI TERMINA PORTFOLIO--------------->
+
+        <!---------------AQUI COMIENZA ARTICLES -------------->
+        <section class="articles" id="articles">
+          <h2>Articles</h2>
+          <section class="divider"></section>
+          <ul>
+            <li class="article-module-1">
+              <a class="article-module-title" href="https://ianlunn.co.uk/articles/20-years-css-experience">20 Years
+                Experience with CSS </a>
+              <div class="article-content" >
+                <p>I've been involved in web development since 2000. Quite possibly my favourite
+                tool that I have used for the last 20 years is CSS. It's easy to use, lightweight, and achieves an enormous
+                amount. It's the written language of design that makes the web look great. In this post, I take a look at some
+                of… </p>
+              </div>
+            </li>
+
+            <li class="article-module-2">
+              <a class="article-module-title" href="https://ianlunn.co.uk/articles/gatsby-website-performance-self-host-google-fonts">Improving Website Performance with Self-hosted Google Fonts in Gatsby</a>
+              <div class="article-content">
+                <p>Recently I recreated my website using Gatsby. Today, I wanted to swap the Google-hosted fonts for self-hosted to bump the page speed score. I was surprised to learn how easy this was with Gatsby and wanted to share should you wish to do the same.</p>
+              </div>
+            </li>
+
+            <li class="article-module-3">
+              <a class="article-module-title" href="https://ianlunn.co.uk/articles/2020-website">2020 Website & Gatsby Impressions
+              </a>
+              <p>I recently redesigned and rebuilt my website from the ground-up. The last refresh was in 2015 and it felt like the website was becoming a little stale. It was previously built on WordPress and with not giving it as much attention as I should, the content got out of date and the performance began to dip.</p>
+            </li>
+          </ul>
+        </section>
+        <!----------AQUI TERMINA ARTICLES---------------->
+
+          <div id="Contact" class="contact-section">
+            <div class="contact-headings">
+              <h2>Keep in touch</h2>
+              <div class="divider"></div>
+            </div>
+          </div>
+
+          <div class="container-contact">
+            <div class="contact-form">
+              <h4>Send me a message...</h4>
+
+              <form class="form">
+                <input type="text" placeholder="Name">
+                <input type="email"placeholder="Email">
+                <textarea placeholder="Place your message here..."></textarea>
+                <button type="submit" class="btn-submit">Send message</button>
+              </form>
+            </div>
+          </div>
+      </main>
+    <!--ESTRUCTURA #3 FOOTER-->
+    <footer class="footer">
+      <div class="footer-content">
+        <h2>Verdugo Facundo</h2>
+        <h5>Frontend Developer</h5>
+      </div>
+      <div class="sotial-networks">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-twitter-square"></i>
+      </div>
+    </footer>
+  </body>
+
+</html>
