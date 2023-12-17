@@ -1,0 +1,68 @@
+/*ESTRUCUTURA ABOUT ME*/
+.info-content{
+    color:#fff;
+    width: 100%;
+    height: auto;
+    display: flex;  
+    padding: 20px;
+    /*INFO CONTENT*/
+  .about-facu {
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    justify-content: center;
+  }
+  .about-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 280px;
+      border: 7px solid aqua;
+      height: 380px;
+    }
+  }
+}
+h1{
+    font-size: 3em;
+}
+span{
+    color: aqua;
+}
+.download{
+  padding: 10px 20px;
+  background-color: aqua;
+  border: none; 
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, .69); 
+}
+.download:hover{
+    background-color: #fff;
+}
+
+.dowload-button{
+  text-align: center;
+  margin-bottom: 20px;
+    
+}
+
+  
+.about-info h2 {
+  font-size: 2em;
+  color: #19322d;
+}
+  
+
+  
+  .about p {
+    margin-bottom: 1em;
+  }

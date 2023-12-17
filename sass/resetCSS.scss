@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* SPV SELECTOR - PROPIEDAD - VALOR*/
+  /* LOS SELECTORES SON TODAS NUESTRAS ETUQIETAS HTML*/
+  body{
+      font-family: "Montserrat", sans-serif;
+      overflow-x:hidden;
+      margin: 0 auto;
+  }  
+  /* PARTIMOS DE UN ORDEN JERARQUICO PARA LLEGAR A LA IMAGEN =SELECTORES*/
+  /* DENTRO APLICAREMOS PROPIEDADES Y A ESAS PROPIEDADES SUS RESPECTIVOS VALORES*/
+      /*tipos de medidas:
+      %=tamaÃ±o relativo
+        px= tamaÃ±o fijo
+        vh=
+        vw=  */
+        .main  {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            }

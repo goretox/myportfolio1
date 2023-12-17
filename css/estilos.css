@@ -1,27 +1,34 @@
 @charset "UTF-8";
 /* estilos.css */
 @import url("https://fonts.googleapis.com/css?family=Tangerine");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(39, 37, 134, 0);
 }
 
-/* SPV SELECTOR - PROPIEDAD - VALOR*/
-/* LOS SELECTORES SON TODAS NUESTRAS ETUQIETAS HTML*/
-body {
-  font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
-  margin: 0 auto;
+.footer-content h2 {
+  font-size: 3em;
 }
 
-/* PARTIMOS DE UN ORDEN JERARQUICO PARA LLEGAR A LA IMAGEN =SELECTORES*/
-/* DENTRO APLICAREMOS PROPIEDADES Y A ESAS PROPIEDADES SUS RESPECTIVOS VALORES*/
-/*tipos de medidas:
-%=tamaÃ±o relativo
-  px= tamaÃ±o fijo
-  vh=
- vw=  */
+.footer-content h5 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.sotial-networks {
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  margin-top: 1em;
+}
+
+.sotial-networks i {
+  font-size: 1.5em;
+}
+
 .wrapper {
   background-color: rgba(39, 37, 134, 0.658);
 }
@@ -68,6 +75,27 @@ body {
   transition: ease-in 0.5s;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* SPV SELECTOR - PROPIEDAD - VALOR*/
+/* LOS SELECTORES SON TODAS NUESTRAS ETUQIETAS HTML*/
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+/* PARTIMOS DE UN ORDEN JERARQUICO PARA LLEGAR A LA IMAGEN =SELECTORES*/
+/* DENTRO APLICAREMOS PROPIEDADES Y A ESAS PROPIEDADES SUS RESPECTIVOS VALORES*/
+/*tipos de medidas:
+%=tamaÃ±o relativo
+  px= tamaÃ±o fijo
+  vh=
+  vw=  */
 .main {
   margin: 0 auto;
   display: flex;
@@ -108,15 +136,6 @@ body {
   height: 380px;
 }
 
-@media (max-width: 992px) {
-  .info-content {
-    flex-direction: column;
-  }
-  .portfolio {
-    flex-direction: column;
-  }
-}
-/*/////////////////////////////*/
 h1 {
   font-size: 3em;
 }
@@ -225,92 +244,14 @@ span {
   color: rgba(0, 255, 255, 0.363);
 }
 
-.articles {
-  background-color: rgba(0, 255, 255, 0.397);
+@media (max-width: 992px) {
+  .info-content {
+    flex-direction: column;
+  }
+  .portfolio {
+    flex-direction: column;
+  }
 }
-
-.articles, h2 {
-  color: #000000;
-}
-
-.article-module-1 {
-  margin: 20px;
-  padding: 15px;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-}
-
-.article-module-2 {
-  margin: 20px;
-  padding: 15px;
-}
-
-.article-module-3 {
-  margin: 20px;
-  padding: 15px;
-}
-
-.contact-color {
-  background-color: rgba(39, 37, 134, 0.658);
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  width: 30vw;
-  margin-top: 2em;
-}
-
-.form input {
-  padding: 10px 20px;
-  margin-bottom: 1em;
-  background: none;
-  border: none;
-  border-bottom: 1px solid #fff;
-}
-
-.form textarea {
-  height: 150px;
-  background: none;
-  color: #fff;
-  padding: 1.5em;
-  border-bottom: 1px solid #fff;
-}
-
-.btn-submit {
-  padding: 10px 20px;
-  margin: 1em;
-  border: none;
-  text-transform: uppercase;
-  background-color: aqua;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(39, 37, 134, 0);
-}
-
-.footer-content h2 {
-  font-size: 3em;
-}
-
-.footer-content h5 {
-  font-size: 1.5em;
-  text-align: center;
-}
-
-.sotial-networks {
-  display: flex;
-  justify-content: space-evenly;
-  width: 300px;
-  margin-top: 1em;
-}
-
-.sotial-networks i {
-  font-size: 1.5em;
-}
+/*/////////////////////////////*/
 
 /*# sourceMappingURL=estilos.css.map */

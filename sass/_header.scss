@@ -1,0 +1,37 @@
+.wrapper{
+    background-color: rgba(39, 37, 134, 0.658);
+  }
+  .brand span {
+  color: rgba(39, 37, 134, 0.658);
+  }
+  .brand {
+      margin-top: -7px;
+  }
+  .navbar{
+      position:sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 2em;
+      }
+  .MENU{
+      display: flex;
+      width: 50%;
+      justify-content: space-around;
+  }
+  .MENU li{
+      list-style: none;
+  }
+  .MENU  a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+  }
+  .MENU .ACTIVE {
+  color: rgb(0, 247, 255);
+  }
+  .MENU a:hover {
+      background-color: aqua;
+      color: #100a24;
+      transition: ease-in .5s;
+  }

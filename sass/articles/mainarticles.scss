@@ -1,0 +1,50 @@
+.articles{
+    background-color:rgba(0, 255, 255, 0.397)
+  }
+  .articles, h2{
+    color:#000000;
+  }
+  .article-module-1{
+    margin: 20px;
+    padding: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+  }
+  .article-module-2{
+    margin: 20px;
+    padding: 15px
+  }
+  .article-module-3{
+    margin: 20px;
+    padding: 15px
+  }
+  .contact-color{
+    background-color: rgba(39, 37, 134, 0.658);
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
+    width:30vw;
+    margin-top: 2em;
+  }
+  .form input{
+    padding: 10px 20px;
+    margin-bottom: 1em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+  }
+  .form textarea{
+    height: 150px;
+    background:none;
+    color: #fff;
+    padding: 1.5em;
+    border-bottom: 1px solid #fff;
+  }
+  .btn-submit{
+    padding: 10px 20px;
+    margin: 1em;
+    border: none;
+    text-transform: uppercase;
+    background-color: aqua;
+  }
