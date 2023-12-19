@@ -253,5 +253,39 @@ span {
   }
 }
 /*/////////////////////////////*/
+.contact-color {
+  background-color: rgba(39, 37, 134, 0.658);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin-top: 2em;
+}
+
+.form input {
+  padding: 10px 20px;
+  margin-bottom: 1em;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+
+.form textarea {
+  height: 150px;
+  background: none;
+  color: #fff;
+  padding: 1.5em;
+  border-bottom: 1px solid #fff;
+}
+
+.btn-submit {
+  padding: 10px 20px;
+  margin: 1em;
+  border: none;
+  text-transform: uppercase;
+  background-color: aqua;
+}
 
 /*# sourceMappingURL=estilos.css.map */
