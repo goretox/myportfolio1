@@ -178,6 +178,7 @@ span {
   display: flex;
   justify-content: center;
   padding: 5em;
+  align-items: center;
 }
 
 .portfolio-heading {
@@ -236,7 +237,21 @@ span {
 .button-content {
   display: flex;
   justify-content: center;
-  margin: 1em;
+  padding: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button span {
+  background-color: black;
+  padding: 16px 24px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+button :hover span {
+  background: none;
+  transform: scale(0.9);
 }
 
 .project-details-button a {
