@@ -1,25 +1,29 @@
 .contact-color{
     background-color: rgba(39, 37, 134, 0.658);
   }
-  .form{
+  .form {
     display: flex;
     flex-direction: column;
-    width:30vw;
+    width:592px;
+    max-width: 100%;
+    border-radius: 8px;
+    padding: 48px 48px 48px;
+    position: relative;
     margin-top: 2em;
-  }
-  .form input{
+    input {
     padding: 10px 20px;
     margin-bottom: 1em;
     background: none;
     border: none;
     border-bottom: 1px solid #fff;
   }
-  .form textarea{
+  textarea {
     height: 150px;
     background:none;
     color: #fff;
     padding: 1.5em;
     border-bottom: 1px solid #fff;
+  }
   }
   .btn-submit{
     padding: 10px 20px;

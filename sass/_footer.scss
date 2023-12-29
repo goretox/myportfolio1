@@ -8,11 +8,10 @@
   
   .footer-content h2 {
     font-size: 3em;
-  }
-  
-  .footer-content h5 {
-    font-size: 1.5em;
-    text-align: center;
+    h5 {
+      font-size: 1.5em;
+      text-align: center;
+    }
   }
   
   .sotial-networks {
@@ -20,8 +19,8 @@
     justify-content: space-evenly;
     width: 300px;
     margin-top: 1em;
+    i {
+      font-size: 1.5em;
+    }
   }
   
-  .sotial-networks i {
-    font-size: 1.5em;
-  }

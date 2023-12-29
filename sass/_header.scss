@@ -1,6 +1,6 @@
 .wrapper{
     background-color: rgba(39, 37, 134, 0.658);
-  }
+ }
   .brand span {
   color: rgba(39, 37, 134, 0.658);
   }
@@ -14,19 +14,20 @@
       justify-content: space-between;
       padding: 2em;
       }
-  .MENU{
+  .MENU {
       display: flex;
       width: 50%;
       justify-content: space-around;
-  }
-  .MENU li{
-      list-style: none;
-  }
-  .MENU  a {
-      color: #fff;
+      li{
+        list-style: none;
+      }
+      a {
+        color: #fff;
       text-decoration: none;
       padding: 10px 20px;
+      }
   }
+
   .MENU .ACTIVE {
   color: rgb(0, 247, 255);
   }
