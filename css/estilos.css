@@ -6,10 +6,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(39, 37, 134, 0);
+  background: #155263;
 }
 
 .footer-content h2 {
+  font-family: Playfair Display;
   font-size: 3em;
 }
 .footer-content h2 h5 {
@@ -26,9 +27,18 @@
 .sotial-networks i {
   font-size: 1.5em;
 }
+.sotial-networks .color-instagram {
+  color: orange;
+}
+.sotial-networks .color-linkedin {
+  color: green;
+}
+.sotial-networks .color-twitter {
+  color: black;
+}
 
 .wrapper {
-  background-color: rgba(39, 37, 134, 0.658);
+  background-color: rgba(37, 71, 134, 0.658);
 }
 
 .brand span {
@@ -101,7 +111,7 @@ body {
 
 /*ESTRUCUTURA ABOUT ME*/
 .info-content {
-  color: #fff;
+  background: #407088;
   width: 100%;
   height: auto;
   display: flex;
@@ -137,12 +147,12 @@ h1 {
 }
 
 span {
-  color: aqua;
+  color: #f96d00;
 }
 
 .download {
   padding: 10px 20px;
-  background-color: aqua;
+  background-color: rgb(157, 189, 189);
   border: none;
   border-radius: 20px;
   margin-top: 10px;
@@ -161,7 +171,7 @@ span {
 
 .about-info h2 {
   font-size: 2em;
-  color: #19322d;
+  color: #f96d00;
 }
 
 .about p {
@@ -199,7 +209,7 @@ span {
 
 .card {
   width: 300px;
-  background-color: rgba(0, 255, 255, 0.438);
+  background-color: rgb(223, 223, 223);
   margin: 1em;
 }
 .card img {
@@ -249,6 +259,10 @@ button :hover span {
   color: rgba(0, 255, 255, 0.363);
 }
 
+#header {
+  background: url(https://images.unsplash.com/photo-1415795854641-f4a487a0fdc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80) center center/cover no-repeat;
+}
+
 @media (max-width: 992px) {
   .info-content {
     flex-direction: column;
@@ -258,41 +272,81 @@ button :hover span {
   }
 }
 /*/////////////////////////////*/
-.contact-color {
-  background-color: rgba(39, 37, 134, 0.658);
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  width: 592px;
-  max-width: 100%;
-  border-radius: 8px;
-  padding: 48px 48px 48px;
+.get-in-touch {
+  max-width: 800px;
+  margin: 50px auto;
   position: relative;
-  margin-top: 2em;
-}
-.form input {
-  padding: 10px 20px;
-  margin-bottom: 1em;
-  background: none;
-  border: none;
-  border-bottom: 1px solid #fff;
-}
-.form textarea {
-  height: 150px;
-  background: none;
-  color: #fff;
-  padding: 1.5em;
-  border-bottom: 1px solid #fff;
 }
 
-.btn-submit {
-  padding: 10px 20px;
-  margin: 1em;
-  border: none;
+.get-in-touch .title {
+  text-align: center;
   text-transform: uppercase;
-  background-color: aqua;
+  letter-spacing: 3px;
+  font-size: 3.2em;
+  line-height: 48px;
+  padding-bottom: 48px;
+  color: #5543ca;
+  background: #5543ca;
+  background: -moz-linear-gradient(left, #f4524d 0%, #5543ca 100%) !important;
+  background: -webkit-linear-gradient(left, #f4524d 0%, #5543ca 100%) !important;
+  background: linear-gradient(to right, #f4524d 0%, #5543ca 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.contact-form .form-field {
+  position: relative;
+  margin: 32px 0;
+}
+
+.contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 2px 0;
+  border-color: #5543ca;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.contact-form .input-text:focus {
+  outline: none;
+}
+
+.contact-form .input-text:focus + .label,
+.contact-form .input-text.not-empty + .label {
+  -webkit-transform: translateY(-24px);
+  transform: translateY(-24px);
+}
+
+.contact-form .label {
+  position: absolute;
+  left: 20px;
+  bottom: 11px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #5543ca;
+  cursor: text;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.contact-form .submit-btn {
+  display: inline-block;
+  background-color: #000;
+  background-image: linear-gradient(125deg, #a72879, #064497);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  width: 200px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=estilos.css.map */

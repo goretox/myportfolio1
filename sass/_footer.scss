@@ -3,10 +3,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(39, 37, 134, 0);
+    background: #155263; 
   }
   
   .footer-content h2 {
+    font-family: Playfair Display;
     font-size: 3em;
     h5 {
       font-size: 1.5em;
@@ -21,6 +22,15 @@
     margin-top: 1em;
     i {
       font-size: 1.5em;
+    }
+    .color-instagram {
+      color: orange;
+    }
+    .color-linkedin {
+      color: green;
+    }
+    .color-twitter{
+      color: black;
     }
   }
   

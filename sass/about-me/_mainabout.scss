@@ -1,6 +1,6 @@
 /*ESTRUCUTURA ABOUT ME*/
 .info-content{
-    color:#fff;
+    background: #407088;
     width: 100%;
     height: auto;
     display: flex;  
@@ -34,11 +34,11 @@ h1{
     font-size: 3em;
 }
 span{
-    color: aqua;
+    color: #f96d00; 
 }
 .download{
   padding: 10px 20px;
-  background-color: aqua;
+  background-color: rgb(157, 189, 189);
   border: none; 
   border-radius: 20px;
   margin-top: 10px;
@@ -58,7 +58,7 @@ span{
   
 .about-info h2 {
   font-size: 2em;
-  color: #19322d;
+  color: #f96d00; 
 }
   
 

@@ -27,7 +27,7 @@
   } 
   .card {
     width: 300px;
-    background-color:rgba(0, 255, 255, 0.438);
+    background-color:rgb(223, 223, 223);
     margin: 1em;
     img {
       width: 100%;
@@ -73,4 +73,7 @@
   .project-details-button a {
     text-decoration: none;
     color:rgba(0, 255, 255, 0.363)
+  }
+  #header {
+    background: url(https://images.unsplash.com/photo-1415795854641-f4a487a0fdc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80) center center / cover no-repeat ;
   }

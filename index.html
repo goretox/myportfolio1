@@ -52,6 +52,7 @@
           </div>
         </nav>
       </header>
+    </div>
       <!--ESTRUCTURA #2 MAIN SECTIONS- ARTICLES-DIVS-ASIDES -->
       <main class="main">
 
@@ -86,38 +87,55 @@
         <!-------------AQUI TERMINA ABOUT ME---------------->
 
         <!--------------------PORTFOLIO--------------------->
-        <div class="portfolio-heading">
-          <h2>My Portfolio</h2>
+      <nav class="bg-dark navbar-dark">
+        <div class="container">
+        </div>
+        </nav>
+         <section id="header" class="jumbotron text-center">
+           <h1 class="display-3">My Portfolio</h1>
+           <p class="lead">These are my future projects.</p>
+      </section>
+        
+      <section id="gallery">
+        <div class="container">
+          <div class="row">
+          <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Sunset</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+             <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+              <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+            </div>
+           </div>
+          </div>
+        <div class="col-lg-4 mb-4">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Sunset</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+             <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+              <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+            </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Sunset</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+             <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+              <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+            </div>
+           </div>
+          </div>
+        </div>
       </div>
-  
-  <div class="portfolio" id="portfolio">
-      <div class="card" style="width: 18rem;">
-          <img src="images/project image.webp" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Project details</a>
-          </div>
-        </div>
-        
-        <div class="card" style="width: 18rem;">
-          <img src="images/project image.webp" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Project details</a>
-          </div>
-        </div>
-        
-        <div class="card" style="width: 18rem;">
-          <img src="images/project image.webp" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Project details</a>
-          </div>
-          </div>
-  </div>
+      </section>
+      
         <!---------------AQUI TERMINA PORTFOLIO--------------->
 
         <!---------------AQUI COMIENZA ARTICLES -------------->
@@ -152,26 +170,34 @@
         </section>
         <!----------AQUI TERMINA ARTICLES---------------->
         <div class="contact-color">
-          <div id="Contact" class="contact-tittle">
-            <div class="contact-headings">
-              <h2>Keep in touch</h2>
-              <div class="divider"></div>
-            </div>
-          </div>
-
-          <div class="container-contact">
-            <div class="contact-form">
-              <h4>Send me a message...</h4>
-
-              <form class="form">
-                <input type="text" placeholder="Name">
-                <input type="email"placeholder="Email">
-                <textarea placeholder="Place your message here..."></textarea>
-                <button type="submit" class="btn-submit">Send message</button>
-              </form>
-            </div>
-          </div>
-        </div>
+          <section class="get-in-touch">
+            <h1 class="title">Get in touch</h1>
+            <form class="contact-form row">
+               <div class="form-field col-lg-6">
+                  <input id="name" class="input-text js-input" type="text" required>
+                  <label class="label" for="name">Name</label>
+               </div>
+               <div class="form-field col-lg-6 ">
+                  <input id="email" class="input-text js-input" type="email" required>
+                  <label class="label" for="email">E-mail</label>
+               </div>
+               <div class="form-field col-lg-6 ">
+                  <input id="company" class="input-text js-input" type="text" required>
+                  <label class="label" for="company">Company Name</label>
+               </div>
+                <div class="form-field col-lg-6 ">
+                  <input id="phone" class="input-text js-input" type="text" required>
+                  <label class="label" for="phone">Contact Number</label>
+               </div>
+               <div class="form-field col-lg-12">
+                  <input id="message" class="input-text js-input" type="text" required>
+                  <label class="label" for="message">Message</label>
+               </div>
+               <div class="form-field col-lg-12">
+                  <input class="submit-btn" type="submit" value="Submit">
+               </div>
+            </form>
+         </section>
       </main>
     <!--ESTRUCTURA #3 FOOTER-->
     <footer class="footer">
@@ -180,13 +206,13 @@
         <h5>Frontend Developer</h5>
       </div>
       <div class="sotial-networks">
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com" class="color-instagram" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-instagram"></i>
           </a>
-        <a href="https://www.linkedin.com/in/facundo-verdugo-378076216/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/facundo-verdugo-378076216/" class="color-linkedin" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-linkedin"></i>
           </a>
-        <a href="https://twitter.com/iniciarsesion?lang=es" target="_blank" rel="noopener noreferrer">
+        <a href="https://twitter.com/iniciarsesion?lang=es" class="color-twitter" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-x-twitter"></i>
           </a>
       </div>
