@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="css/estilos.css">
     <!--Termina css HERE-->
 
@@ -21,7 +21,7 @@
 
   <body>
     <!-- ESTRUCTURA #1 HEADER-NAV -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <div class="wrapper">
       <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -87,16 +87,16 @@
         <!-------------AQUI TERMINA ABOUT ME---------------->
 
         <!--------------------PORTFOLIO--------------------->
-      <nav class="bg-dark navbar-dark">
+      <nav id="portfolio" class="bg-dark navbar-dark">
         <div class="container">
         </div>
         </nav>
-         <section id="header" class="jumbotron text-center">
-           <h1 class="display-3">My Portfolio</h1>
-           <p class="lead">These are my future projects.</p>
+          <section id="header" class="jumbotron text-center">
+            <h1 class="display-3">My Portfolio</h1>
+            <p class="lead">These are my future projects.</p>
       </section>
         
-      <section id="gallery">
+      <section class="gallery">
         <div class="container">
           <div class="row">
           <div class="col-lg-4 mb-4">
@@ -105,10 +105,10 @@
             <div class="card-body">
               <h5 class="card-title">Sunset</h5>
               <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-             <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+              <a href="" class="btn btn-outline-success btn-sm">Read More</a>
               <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
             </div>
-           </div>
+            </div>
           </div>
         <div class="col-lg-4 mb-4">
         <div class="card">
@@ -116,7 +116,7 @@
             <div class="card-body">
               <h5 class="card-title">Sunset</h5>
               <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-             <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+              <a href="" class="btn btn-outline-success btn-sm">Read More</a>
               <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
             </div>
             </div>
@@ -127,10 +127,10 @@
             <div class="card-body">
               <h5 class="card-title">Sunset</h5>
               <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-             <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+              <a href="" class="btn btn-outline-success btn-sm">Read More</a>
               <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
             </div>
-           </div>
+            </div>
           </div>
         </div>
       </div>
@@ -140,7 +140,7 @@
 
         <!---------------AQUI COMIENZA ARTICLES -------------->
         <section class="articles" id="articles">
-          <h2>Articles</h2>
+          <h2 class="articles-estiles">Articles</h2>
           <section class="divider"></section>
           <ul>
             <li class="article-module-1">
@@ -169,35 +169,36 @@
           </ul>
         </section>
         <!----------AQUI TERMINA ARTICLES---------------->
-        <div class="contact-color">
+        <div id="Contact" class="contact-color">
           <section class="get-in-touch">
             <h1 class="title">Get in touch</h1>
             <form class="contact-form row">
-               <div class="form-field col-lg-6">
+              <div class="form-field col-lg-6">
                   <input id="name" class="input-text js-input" type="text" required>
                   <label class="label" for="name">Name</label>
-               </div>
-               <div class="form-field col-lg-6 ">
+                </div>
+                <div class="form-field col-lg-6 ">
                   <input id="email" class="input-text js-input" type="email" required>
                   <label class="label" for="email">E-mail</label>
-               </div>
-               <div class="form-field col-lg-6 ">
+                </div>
+                <div class="form-field col-lg-6 ">
                   <input id="company" class="input-text js-input" type="text" required>
                   <label class="label" for="company">Company Name</label>
-               </div>
+                </div>
                 <div class="form-field col-lg-6 ">
                   <input id="phone" class="input-text js-input" type="text" required>
                   <label class="label" for="phone">Contact Number</label>
-               </div>
-               <div class="form-field col-lg-12">
+                </div>
+                <div class="form-field col-lg-12">
                   <input id="message" class="input-text js-input" type="text" required>
                   <label class="label" for="message">Message</label>
-               </div>
-               <div class="form-field col-lg-12">
-                  <input class="submit-btn" type="submit" value="Submit">
-               </div>
+                </div>
+                <div class="form-field col-lg-12">
+               <!--<input class="submit-btn" type="submit" value="Submit">-->
+                <p class="submit-btn">SUBMIT</p>
+                </div>
             </form>
-         </section>
+          </section>
       </main>
     <!--ESTRUCTURA #3 FOOTER-->
     <footer class="footer">
