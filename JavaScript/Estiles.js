@@ -24,8 +24,14 @@
         }
     }
 
-    function dividir(){
-        return 24 / 6;
+    function dividir (a,b){
+        if (b!=0){
+            return a/b;
+
+        }else{
+            console.log("No se puede dividir por 0");
+        }
     }
-    let resultado =dividir();
-    console.log(resultado);
+    let coloqueElPrimerNumero=prompt("Coloque el primer numero");
+    let coloqueElSegundoNumero=prompt("Coloque el segundo numero")
+    console.log(dividir(coloqueElPrimerNumero,coloqueElSegundoNumero));   
