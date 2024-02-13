@@ -35,3 +35,14 @@
     let coloqueElPrimerNumero=prompt("Coloque el primer numero");
     let coloqueElSegundoNumero=prompt("Coloque el segundo numero")
     console.log(dividir(coloqueElPrimerNumero,coloqueElSegundoNumero));   
+
+    let personajePrincipal = {
+        nombre:"Sheck",
+        Pelicula:"Sheck",
+        Edad:" 24",
+    }
+console.log(personajePrincipal);
+
+    let personajes =["Fiona", "burro"];
+    personajes[2] ="El gato con botas";
+    console.log(personajes);
