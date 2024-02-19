@@ -36,13 +36,50 @@
     let coloqueElSegundoNumero=prompt("Coloque el segundo numero")
     console.log(dividir(coloqueElPrimerNumero,coloqueElSegundoNumero));   
 
+
     let personajePrincipal = {
         nombre:"Sheck",
         Pelicula:"Sheck",
         Edad:" 24",
     }
-console.log(personajePrincipal);
+    let primerPersonajeSecundario = { 
+        nombre:"Fiona",
+        Pelicula:"Sheck",
+        Edad:"24",
+    }
+    let segundoPersonajeSecundario = {
+        nombre:"Burro",
+        Pelicula:"Sheck",
+        Edad:"8",
+    }
+    let tercerPersonajeSecundario = {  
+        nombre:"GatoConBotas",
+        Pelicula:"Sheck",
+        Edad:"8",
+    }
 
-    let personajes =["Fiona", "burro"];
-    personajes[2] ="El gato con botas";
-    console.log(personajes);
+    let personajes = [personajePrincipal,primerPersonajeSecundario,segundoPersonajeSecundario,tercerPersonajeSecundario];
+    personajePrincipal = true;
+    if (personajePrincipal) {
+        console.log ("El protagonsita es el personaje principal")
+    }else{
+        console.log("Este personaje es un farsante y no es el principal")
+    }
+
+
+
+    const personajesHarryPotter = [
+            { nombre:"Harry Potter",edad:17,},
+            { nombre:"Hermione Granger", edad:18},
+            {nombre:"Ron Weasley",edad:17},
+            {nombre:"Ginny Weasley",edad:16},
+    ];
+    function filtrarPorEdadMenorDe18(personaje) {
+        return personaje.edad < 18;
+    }
+    const personajesMenoresde18 = personajesHarryPotter.filter(filtrarPorEdadMenorDe18);
+    console.log(personajesMenoresde18);
+
+
+    const nombres = personajesHarryPotter.map(persona => persona.nombre);
+    console.log(nombres)
