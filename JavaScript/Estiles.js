@@ -7,7 +7,7 @@
 //}else{
     //console.log("acceso denegado")
 //}
-
+/* 
     const tienesEntrada= prompt("¿Tienes entrada? responde si o no")
     const eresMayorDeEdad=prompt("¿Es mayor de edad? responde si o no") 
 
@@ -83,3 +83,10 @@
 
     const nombres = personajesHarryPotter.map(persona => persona.nombre);
     console.log(nombres)
+
+    const proyectoarray = document.getElementsByClassName(".proyectoarray")
+    const titulo = document.createElement("h2")
+    titulo.textContent = "Proyecto personal"
+    titulo.innerText
+    
+    document.body.appendChild(titulo) */

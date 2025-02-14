@@ -1,0 +1,1121 @@
+
+APARTADO DE ARRAY:
+
+
+Que es un array?
+Es una estructura de datos que se utiliza para almacenar una coleccion de valores
+Dentro de un array puedes ser cualquier tipo de dato o otros arrays 
+Array es una lista indexada.
+listas que pueden contener datos de tipo numerico, strings, objetos , funciones o otros arrays.
+Todos los indices de arrays inician en 0 
+
+let productos = ["arroz","banana","fideos", "gaseosas"]; esto es un array de strings
+let numeros = [1,2,3,4,5,6] esto es un array de numeros
+let boolean = [true, false, false, true, false] array de boolean
+let popurri = ["arroz",1, true] podes mezclar datos
+
+ejemplo:
+const USUARIO = [
+  {
+    nombre: "maxi",
+    apellido: "cardenas",
+    edad:31
+  },
+  {
+    nombre: "emiliano",
+    apellido: "cararo",
+    edad: 25 
+
+  }
+]
+console.log(productos)
+console.log(productos[3]) llama al numero 3 del array
+accedemos a uno de los valores que conitene el array a travez de su indice.
+lenght: es el metodo de longitud, es el total de los indices.
+
+RECORRIDO DE UN ARRAY:
+let productos = ["arroz", "banana", "fideos", "gaseosa"];
+for (let i = 0; i < 4; i++){
+  console.log (productos[i]);
+}
+let cantidadDeProductos = productos.lenght;
+console.log("la cantidad de productos que posee el array es :"+cantidadDeProductos)
+lenght => es un metodo que nos va a proporcionar el dato de la cantidad de elementos que contiene el arreglo.
+no solo sirve para arrays ej:
+
+let texto= "mundoCoder"
+let longitudTexto = texto.lenght
+console.log(longitudTexto);
+
+PUSH => que basicamente lo va a usar para agregar elementos al array al final del mismo 1 o mas.
+let numero = [1,2,3];
+numero.push(4)
+
+POP => elimina el ultimo elemento del array
+let ActualizarNumero = numero.pop();
+console.log(ActualizarNumero)
+console.log(numero)
+
+SHIFT => elimina el primer elemento de un array
+numeroEliminado = numero.shift();
+console.log(numeroEliminado);
+console.log(numero);
+
+UNSHIFT => nos permite agregar elementos al inicio del array pero desplaza los que existen.
+let fruta =["banana","manzana","frutilla","naranja","manzana"]; 
+const NUEVO_ARRAY = fruta.unshift(kiwi);
+Esto nos muesta la cantidad de 6 elementos dentro del array.
+
+SPLICE => este elemento nos sirve para agregar, eliminar o remplazar elementos de un array
+splice => (indice, cantidad, el tipo de dato)
+let colores = ["rojo", "naranja", "amarillo"];
+colores.splice (1,1,"amarillo");
+
+JOIN => convierte los elementos de un array en una cadena de texto y los une usando unos
+separadores especificos por nosotros.
+
+let stringColores = colores.join("");
+console.log(stringColores);
+
+CONCAT => nos permite convinar 2 o mas arrays en uno nuevo.
+
+let autos = ["honda","toyota","nissan"];
+let masAutos = autos.concat (["liffan","cherry"]);
+console.log (masAutos);
+
+OTRO EJEMPLO :
+let array1  = [1,2,3];
+let array2 = [4,5,6];
+let array3 = [7,8,9];
+const NUEVO_ARRAY = array1.concat(array2,array3);
+console.log (NUEVO_ARRAY);
+
+SLICE => nos permite sacar una porcion de un array y crear un array con esos elementos
+
+array.slice(indice,fin) => indice donde comienza fin donde termina
+
+let  arrayNumero = [1,2,3,4,5];
+let parteDelArray = arrayNumero.slice(1,4);
+slice (posInicial, posFinalNoIncluida);
+2, 3, 4
+
+INDEXOF => busca la primera aparicion de un elemento en un array y nos devuelve el indice osea 
+la posicion donde esta ese elemento.
+Por ej :
+
+let fruta = ["manzana","banana","frutilla","naranja","manzana"];
+let indice = fruta.indexOf ("manzana");
+console.log(indice);
+Podes buscar elemento que ya existan dentro del array.
+podemos tambien indicarle desde que indice empezar a buscar 
+let indice = fruta.indexOf ("manzana",3);
+console.log(indice);
+
+INCLUDES => nos dice si un valor esta incluido en un array, el dato lo muestra de forma 
+booleana si esta da true y si no esta da false.
+
+let   estaEnFrutas = fruta.includes("kiwi");
+console.log(estaEnFrutas);
+
+REVERSE => Funciona para dar vuelta un array 
+
+let = frutaDadaVuelta = fruta.reverse();
+console.log (frutaDadaVuelta);
+
+ARRAY DE OBJETOS => son estructuras que nos permiten almacenar colecciones de objetos en un solo lugar
+
+const PERSONAS = [
+  {nombre: "pedro", edad: 30},
+  {nombre: "carlos", edad: 25},
+  {nombre: "ezequiel", edad:21},
+
+]
+console.log(PERSONAS)
+
+FOR OF => ES LA ESTRUCTURA DE CONTROL DE FLUJO QUE PODEMOS TRABAJAR CUANDO TENEMOS UN ARRAY DE OBJETOS
+for (const personaObjetos of PERSONAS){
+  console.log(personaObjetos);
+}
+------------------------------------------------------------------------------------------------------------
+ 
+  APARTADO DE FUNCIONES DE ORDEN SUPERIOR 1 :
+
+ABSTRACCION => manera que tenemos de reducir la complejidad de un codigo,permitiendonos implementar
+maneras y diseños mas eficientes en los datos.
+
+VENTAJAS :
+evitar codigo duplicado
+podemos crear multiples instancias con una sola abstraccion
+podemos encapsular datos
+evitar codigo de bajo nivel (mejores practicas)
+ej :
+function sumar (a, b){
+  return a + b 
+}
+let resultado = sumar (10,3);
+console.log(resultado)
+funciones de orden superior => HOF, hight order function.
+
+function asignarOperacion (operacion){
+  if(operacion === "sumar"){
+    return function (num1,num2){
+      return num1 + num2;
+    }
+  }else if (operacion) === ("restar"){
+    return (num1, num2) => num1 - num 2;
+  }
+}
+
+let sumar = asignarOperacion("sumar")
+let restar = asignarOperacion("restar")
+
+console.log (sumar(4,6))
+
+FUNCIONES PASADAS POR PARAMETROS  
+CALLBACK => es una funcion que se pasa como argumento a otra funcion y se ejecuta
+despues de que ocurra algun evento especifico.
+CALLBACK => van a ser fundamentales cuando trabajen funciones asincronas donde tengamos eventos.
+
+ej: 
+function operar(num1,num2 operacion){
+  return operacion (num1,num2);
+
+}
+function suma  (a,b){
+  return a + b
+}
+function resta (a,b){
+  return a - b 
+}
+function multiplicar (a,b){
+  return a*b
+}
+
+console.log(operar(5,3 suma));
+
+FOR EACH => basicamente lo vamos a usar para iterar cada elemento de un array.
+FORMA LARGA :
+const letras = ["a","b","c"];
+for (let i = 0; i < letras.lenght; i++){
+  const elemento = letras [i];
+  console.log (elemento);
+}
+Ej de ABSTRACCION :
+letras.forEach(item => console.log(item));
+
+otro ej:
+const numeros = [1,2,3,4];
+numeros.forEach(function(numero){
+  const resultado = numero*2;
+  console.log(resultado);
+})
+
+--------------------------------------------------------------------------------------------------------------
+FILTER => que basicamente nos sirve para crear un nuevo array con todos los elementos cuales se va a poder
+
+ generar siempre y cuando se cumpla una condicion preterminada dada.
+
+ const entregas = [
+  {
+  usuario:"joaquin",
+  total:60,
+  seEntrego:true
+  },
+  {
+    usuario:"ivan",
+    total:120,
+    seEntrego:true
+  },
+  {
+    usuario:"hector",
+    total:200,
+    seEntrego:false
+  },
+  {
+    usuario:"barbara",
+    total:180,
+    seEntrego:true
+  },
+  {
+    usuario:"facundo",
+    total:160,
+    seEntrego:false
+  },
+ ]
+const respuesta = entregas.filter(item => item.seEntrego === false && item.total >= 100);
+console.log ( respuesta );
+
+SERCH => SIRVE PARA BUSCAR A TRAVEZ DE PALABRAS.
+INCULUDES => es un metodo que podemos usar nosotros en lo que es el array para mencionar un elemento 
+especifico.
+  const serch = (letra) =>{
+    return entregas.filter(item=>{
+      return item.usuario.includes(letra)
+    })
+}
+console.log(serch("bar"));
+
+------------------------------------------------------------------------------------------------------------
+SOME => nos sirve para nosotros verificar al menos algo del array que se esta declarando sirve adentro
+
+y lo devuelve en formado bollean.
+metodo que verifica si al menos un elemento cumple con una condicion.
+
+ej:
+const numeros [1,2,3,4,20,31,45,40]
+verificamos si un elemento es mayor a 40
+const numeroMayor = numeros.some(function(numeroArray){
+  return numeroArray >40;
+})
+console.log(numeroArray);
+
+------------------------------------------------------------------------------------------------------------
+
+MAPS => El método map() en JavaScript es una función disponible para los arrays
+ que permite crear un nuevo array con los resultados
+ de aplicar una función específica a cada uno de los elementos del array original. Es decir, map() 
+ toma una función como argumento y la aplica a cada elemento del array, 
+ retornando un nuevo array con los valores transformados.
+ nos sirve para crear un nuevo array con los resultados que se den a travez de una funcion.
+
+  toUpperCase => Nos sirve para transformar letras a mayuscula.
+ej:
+const productos = [
+  {nombre:"monitor",precio:1500},
+  {nombre:"teclado",precio:2500},
+  {nombre:"mouse",precio:3000},
+  {nombre:"auricular",precio:4000},
+]
+const cambiarLetras = productos.map(function(productoArray){
+  return productoArray.nombre.toUpperCase();
+})
+console.log(cambiarLetras);
+crea un nuevo array con solo los nombres.
+
+otro ej :
+
+const porcentajeProducto = 0,1;
+const precio_aumentado =productos.map(funcion(productoArray){
+  return {
+    nombre:productoArray.nombre,
+    precio:productoArray.precio*(1 + porcentajeProducto)
+  }
+})
+
+console.log(precio_aumentado);
+
+------------------------------------------------------------------------------------------------------------
+
+REDUCE => se puede usar para sacar totales.
+Se usa cuando queremos generar una operacion que sea acumulativa en cuanto a los elementos.
+Se suele usar en los carritos de compra.
+se usa para reducir un aray a un solo valor y utiliza una funcion acumuladora.
+
+FORMULA :
+reduce (function(acumulador,elemento,indice,array),0)
+
+ej:
+FORMA ANTIGUA
+const total = [1,2,3,4]
+let sum = 0 ;
+
+for: (let i =0; i < total.lenght; i ++){
+  const elemento = total [i];
+  sum = sum + elemento;
+}
+console.log(sum)
+
+FORMA ACTUALIZADA
+const   totalFinal = total.reduce((sum,elemento)=> sum + elemento, 0);
+console.log(totalFinal);
+otro ej:
+const precioTotal = productos.reduce(function(acumulador,producto){
+    return acumulador + producto.precio;
+},0)
+el va cuando se declara la funcion y el reduce 
+console.log(precioTotal);
+
+------------------------------------------------------------------------------------------------------------
+
+SORT => va a ser uno de los metodos que podemos usar para ordenar elementos de forma alfabetica y numerica
+ascendente y descente.
+ sirve para ordenar el array
+
+ MAYOR A MENOR
+productos.sort(function(a,b){
+  return b.precio - a.precio;
+})
+console.log (productos);
+
+MENOR A MAYOR
+productos.sort(function(a,b){
+  return a.precio - b.precio;
+})
+console.log (productos);
+
+  DE FORMA ALFABETICA 
+productos.sort(function(a,b){
+  const nombreA = a.nombre.toLocaleLowerCase();
+  const nombreB = b.nombre.toLowerCase();
+
+  if (nombreA < nombreB) {
+    return -1;
+  }
+  if (nombreA > nombreB){
+    return 1
+  }
+  return 0;
+})
+console.log(productos);
+
+------------------------------------------------------------------------------------------------------------
+
+APARTADO DE FUNCIONES DE ORDEN SUPERIOR 2:
+
+MATH => javascript provee el objeto MATH que funciona como contenedor de herramientas y metodos 
+para realizar operaciones matemáticas.
+Objeto que proporciona propiedades matemáticas y metodos para realizar diferentes operaciones.
+
+Se puede acceder a algunas constantes matemáticas a travez del objeto Math, como
+pueden ser el numero PI o la constante Euler.
+
+console.log(Math.E);
+console.log(Math.PI);
+
+La constante de Euler sirve para representar una base de algoritmos natural => 2,7182
+El numero PI nos sirve para calcular principalmente circunferencias de circulos => 3,14 
+
+Math.min => nos sirve para devolver el valor mas pequeño.
+Math.max => nos sirve para devolver el valor mas grande.
+MATH.MIN Y MATH.MAX SE PUEDEM EJECUTAR POR VARIABLES O FUNCIONES PERO NO POR ARRAYS PARA ESO 
+ES NECESARIO TRABAJAR CON PREOPERATOR.
+
+ej:
+let minimo = Math.min (54,76,13);
+console.log(minimo);
+Esto me da como resultado en la consola 13
+
+let maximo = Math.max (54,76,13);
+console.log(maximo);
+Esto me da como resultado n la consola 76
+
+CEIL => NOS VA A RETORNAR EL NUMERO QUE INDIQUEMOS SIEMPRE PARA ARRIBA (REDONDEAR) 
+
+ej:
+let ceil = Math.ceil (3.14);
+console.log(ceil);
+redondea a 4
+
+FLOOR => NOS VA A RETORNAR EL NUMERO QUE INDIQUEMOS SIEMPRE PARA ABAJO (REDONDEAR)
+  
+ ej:
+ let floor = Math.floor(3,14);
+ console.log(floor);
+redondea a 3
+
+ROUND => REDONDEA EL NUMERO AL MAS CERCANO
+
+ej:
+let round = Math.round(3.5);
+console.log(round);
+redondea a 4
+
+SQUARE ROOT O SQRT => LO VAMOS A USAR CUANDO QUERAMOS APLICAR UNA RAIZ.
+
+ej:
+let square = Math.sqrt(25);
+console.log(square);
+Da como resultado 5 
+
+POW (base,exponente) => DEVUELVE LA BASE ELEVADA A LA POTENCIA.
+
+ej:
+let potencia = Math.pow (2,3);
+console.log(potencia)
+Da como resultado 8
+
+RANDOM => NOS SIRVE PARA RETORNAR NUMEROS ALEATORIOS PERO QUE SIEMPRE VAN A IR DESDE EL 0 AL 1
+
+ej:
+console.log(Math.random());
+
+numeros que vayan del 1 al 10
+console.log(Math.random()*10);
+
+numeros que vayan del 1 al 10 pero en decimal
+console.log(Math.round(Math.random()*10));
+
+numeros que vayan del 10 al 50
+console.log(Math.round(Math.random()*40+10));
+------------------------------------------------------------------------------------------------------------
+PROYECTO DE EJ DEL PROFE 1:
+
+function lanzarDados(){
+  return Math.floor(Math.random()*5+1);
+}
+function simularTiro (){
+  const LANZAR_LOS_DADOS = prompt ("queres lanzar los dados (si/no)").toLowerCase();
+
+  if(LANZAR_LOS_DADOS===si){
+    let resultadoDado1 = lanzarDados();
+    let resultadoDado2 = lanzarDados();
+
+    console.log(`dado 1: ${resultadoDado1}`)
+    console.log(`dado 2: ${resultadoDado2}`)
+    console.log(`total:${resultadoDado1 + resultadoDado2}`)
+  }else{
+    console.log("fin del juego")
+  }
+}
+simularTiro()
+
+
+PROYECYO DEL PROFE 2:
+
+function adivinanza(){
+  const numeroAleatorio = Math.floor(Math.random()*10);
+
+  let intentos = 0;
+  let adivinanza;
+
+  do{
+    adivinanza = parseInt(prompt("selecciona numeros entre el 0 y el 10"));
+
+    if(!isNaN(adivinanza)&& adivinanza >= 0 && adivinanza <=10){
+      intentos ++;
+
+      if(adivinanza < numeroAleatorio){
+        console.log("El numero es mayor, volve a jugar ")
+      }else if (adivinanza > numeroAleatorio){
+        console.log("El numero es menor, volve a jugar" )
+      }else{
+        console.log("la pegaste")
+      }else{
+        console.log("ingresa un numero valido")
+      }
+    }
+  } while(adivinanza !== numeroAleatorio)
+}
+adivinanza()
+
+
+LA CLASE DATE => EN JAVASCRIPT NOS SIRVE PARA MANIPULAR LAS FECHAS Y HORAS.
+
+let fechaActual = neww Date();
+console.log(fechaActual)
+
+let fechaEspecifica =new Date(2021,0,12);
+console.log(fechaEspecifica)
+
+
+OBTENER COMPONENTES DE LA FECHA
+let anio = fechaActual.getFullYear();
+let mes = fechaActual.getMonth() EN ESTE CASO ENERO EMPIEZA EN 0 POR LO QUE 1 VENDRIA A SER FEBRERO.
+let día = fechaActual.getDate()
+let hora = fechaActual.getHour()
+let minutos = fechaActual.getMinutes()
+let segundos = fechaActual.getSeconds()
+let milisegundos = fechaActual.getMilliseconds()
+console.log(anio, mes, día, hora, minutos, segundos, milisegundos);
+Esto da como resultado 2024 1 5 22 4 31 693
+
+
+let sumaDias= fechaActual.setDate(fechaActual.getDay()+1);
+console.log(sumaDias)
+
+
+
+programar algunas tareas
+
+function programarTarea(){
+  //solicitar tarea
+  let descripcionTarea = prompt ("ingresa tu tarea");
+
+  let horaTarea = parseint(prompt("ingresa la hora"))
+
+  if (isNaN(horaTarea))|| horaTarea < 0 || horaTarea   >= 24 {
+    console.log("hora no valida, ingresa otra")
+  }
+  return;
+ 
+  let minutosTarea = parseint(prompt("ingresar los minutos"))
+
+   if (isNaN(minutosTarea))|| minutosTarea <label 0 || minutosTarea   >= 60 {
+    console.log("ingresa numeros validos")
+    return
+   }
+
+
+//crear la fecha con la hora y los munutos programado
+let fechaTarea = new Date();
+fechaTarea.setHours(horaTarea, MinutosTarea, 0,0)
+
+//calcular el tiempo que falta para la ejecucion de la tarea
+
+let tiempoRestante = fechaTarea.getTime() - newDate().getTime();
+
+//programar la tarea
+
+setTimeout(function(){
+  console.log(`es hora de la tarea ${descripcionTarea}`)
+},tiempoRestante);
+
+console.log(`tarea programada: ${descripcionTarea} a las {horaTarea} , {minutosTarea}`)
+}
+
+programarTarea();
+
+
+------------------------------------------------------------------------------------------------------------
+
+APARTADO DE DOM:
+
+Que es el DOM?
+document option model y va a ser una representacion de una estructura de un documento html.
+Es una estructura de objetos generada por el navegador, la  cual representa la pagina html actual
+
+En el model DOM cada etiqueta HTML es un objeto, al que podemos llamar NODO.
+
+--------------------------------------------------------------------------------------
+
+DOCUMENT => Es un objeto global con el cual nosotros desde JAVASCRIPT  podemos acceder a las etiquetas HTML
+Este objeto nos proporciona una intefaz  para interactuar con elementos 
+y atravez de estos podemos crear eliminar etc.
+
+---------------------------------------------------------------------------------------
+
+5 maneras de acceder al DOM 
+
+(1) getElementById => es un metodo del objeto document y lo utilizamos para seleccionar los id del HTML
+
+Cada vez que nosotros queremos llamar un elemento del DOM desde JAVASCRIPT este tiene que ser guardado
+en una variable => se llama al objeto document.getElementById("se llama al id")
+como me doy cuenta si funcion lo que hice  recien simplemente pongo un console log con la variable.
+getElementsById es el mas usado 
+
+const Pid = document.getElementById("Pid");
+console.log(Pid)
+
+-----------------------------------------------------------------------------------------
+
+(2) getElementsByClassName => se utiliza para seleccionar las clases declaradas en HTML
+
+const PClass = document.getElementsByClassName("PClass");
+console.log(PClass)
+
+------------------------------------------------------------------------------------------
+
+(3) getElementsByTagName => Se utiliza si queremos llamar a una etiqueta en html.
+const li = document.getElementsByTagName("li")
+console.log(li);    
+es el menos utilizado   
+
+------------------------------------------------------------------------------------------
+
+(4) querySelector => nos recuerda a la manera de trabajar de css 
+    cuando usamos querySelector no llama una etquieta a la vez
+const queryTag = document.querySelector("se llama al elemento al elemento")
+console.log(queryTag);
+
+
+Las clases se llaman como en css con un . adelante del nombre asignado
+
+const queryclass = document.querrySelector(".queryclass")
+console.log(queryclass);
+
+Para llamar un queryid colocamos un # adelante de la id que queremos invocar
+
+const queryid = document.querySelector("queryid")
+console.log(querryid)
+
+--------------------------------------------------------------------------------------------
+
+querrySelectorall => con este llamamos a todos
+
+const h1elementos = document.getElementById("h1elementos")
+console.log(h1elementos)
+
+Con esta funcion + el getElementById llamamos al h1 del index.
+
+---------------------------------------------------------------------------------------------
+
+MANIPULACION DE LOS NODOS:
+Solo hay 2 maneras de manipular los nodos
+(1) innertext => Podemos manipular el contenido del elemento
+Es la forma de acceder al texto visible dentro de un elemento
+
+h1Elementos.innertext = "elementos en js" con esto cambio el titulo h1 de nombre.
+
+(2) innerHTML => lo utilizamos para obtener o crear contenido HTML dentro de un elemento.
+inculye a todas las etiquetas HTML.
+
+const contenedorSection = document.getElementById("contenedorSection")
+
+contenedorSection.innerHTML = `
+                            <div>
+                            <h1>card1</h1>
+                            <p>parrafo de mi contenedor</p>
+                            </div>
+
+
+                              `
+
+
+innerHTML lo que me va a permitir es crear bloques de codigo siempre y cuando esten en backticks.
+
+-------------------------------------------------------------------------------------------------
+
+createElement => es el metodo con el cual nosotros podemos crear nuevos nodos osea nuevos NODOS osea nuevas 
+etiquetas 
+
+pasos a seguir para que funcione
+(1) crear un elemento en el HTML en este caso creamos un section con un id que se va a llamar
+crearElemento 
+(2) lo llamamos con const crearElemento = document.getElementById("crearElemento");
+(3) creamos otro const parrafo = document.createElement("p")
+(4)parrafo.innertext = "creamos un parrafo desde Js";
+-----------------------------------------------------------------------------------------------
+
+appendChild => es el metodo que utilizamos para agregar un nodo como hijo 
+a una etiqueta(nodo) ya existente 
+
+crearElemento.appendChild(parrafo);
+con esto agregamos al html todo lo que creamos en JAVASCRIPT
+
+
+CLASSLIST => es un objeto que nos va a permitir agregar, quitar o alterar clases en CSS.
+
+Si quiero que la pagina cambie de blanco a negro o viseversa necesito el CLASSLIST
+
+const parrafoList = document.getElementById("parrafoList");
+
+Esto va a agregar una clase al elemento:
+parrafoList.classlist.add("pepito") esto agrega una clase que se va a llamar pepito
+
+Esto va a remover una clase al elemento:
+parrafoList.classlist.remover("pepito"); esto quita la clase llamada pepito
+
+Esto ayuda a alternar entre clases:
+
+parrafoList.classlist.toggle("pepito")
+se profundiza en eventos.
+Todo lo que escriba en HTML ES ESTATICO y lo que es escriba en JAVASCRIPT ES DINAMICO.
+
+----------------------------------------------------------------------------------------------------------------
+
+APARTADO DE EVENTOS:
+
+Podemos relacionarlo con acciones que van a estar pasando en nuestra pagina web que van a ser 
+detectadas mediantes acciones.
+
+Los eventos son la manera que tenemos en JavaScript de controlar las acciones de los usuarios
+definir un comportamiento de la pagina o aplicacion cuando se produzcan.
+
+//PRIMERA MANERA DE LLAMAR EVENTOS
+
+Esta es la mejor manera de llamar a eventos 
+
+
+addEventListener (evento, funcion que queremos que se ejecute)
+
+Primero llamo a la variable creada en JS y el doom 
+
+ej:
+
+const btn = document.getElementById("btn")
+
+luego llamo a la variable y le agrego addEventListener
+
+btn.addEventListener('click',function(){
+    alert("se esta ejecutando el evento ")
+} )
+
+segundo ej :
+
+const cambiarColor.getElementById("cambiarColor");
+
+cambiarColor.addEventListener('click', function{
+    document.body.style.backgroundColor = 'blue';
+})
+
+
+//SEGUNDA MANERA DE LLAMAR EVENTOS
+
+//La segunda manera que tenemos de llamar eventos es a travez de los nodos.
+
+const btnNodo = document.getElementById("btnNodo");
+
+//el evento es click, on
+btnNodo.onclick = function(){
+  alert('se esta ejecutando el evento a travez de un nodo')
+}
+  
+  EJEMPLO PROFE 
+
+  crea un nav, despues un boton con un id que diga menuBoton, que diga MENU
+  crea una lista (ul) con un id llamado menu con una clase que sea navbar
+  dentro de la lista crea 3 li que digan inicio
+
+
+  let menuBoton = document.getElementById("menuBoton");
+  let menu = document.getElementById('menu')
+
+  menuBoton.onclick = function(){
+    menu.style.display=(menu.style.display ==='block')  => esto es el famoso menu desplegable 
+  }
+
+  operadores ternarios pequeños datos :
+
+  si pones " ? " es un if 
+  si pones " : " es un else 
+  
+  Es una forma mas eficiente y limpia de escribir codigo.
+
+
+  //TERCERA MANERA DE LLAMAR EVENTOS  
+
+  NO SE CONSIDERA BUENA PRACTICA DECLARAR FUNCIONES Y CODIGO JAVASCRIPT DENTRO DEL HTML
+  POR ESO ES LA MENOS USADA Y MENOS RECOEMNDADA.
+
+  EN HTML  crea un boton con el atributo onclick llamado jsEnHTML()  y lo llama hacer click con HTML
+
+  function jsEnHTML(){
+      alert("este evento esta corriendo en HTML")
+  }
+
+
+
+
+              EVENTOS MAS COMUNES 
+
+    
+    
+    MOUSE  TECLADO  CHANGE  INPUT  SUBMIT  OTROS
+
+
+
+//eventos con raton => nos permite interactuar a traves del mouse con HTML    
+
+const caja = document.getElementById("caja");
+//MOUSEOVER SE EJECUTA CUANDO ESTAMOS SOBRE EL ELEMENTO
+caja.onmouseover = () =>{
+  conosle.log("ingreso el mouse")
+}
+
+caja.onmouseout = () =>{
+  conosle.log("salimos del  mouse")
+}
+//MOUSEOUT SE EJECUTA CUANDO EL MOUSE NO ESTA SOBRE EL ELEMENTO
+caja.addEventListener('mouseout',function{
+    console.log("el mouse esta afuera") 
+})
+
+//MOUSEMOVE => VA A DETECTAR EL MOVIMIENTO DEL MOUSE SOBRE EL ELEMENTO.
+
+caja.onmouseover = () =>{
+    console.log ("pasaste el mouse sobre la caja")
+}
+
+EJEMPLO PROFE :
+
+let enlace = document.getElementById('enlace');
+
+enlace.addEventListener("mouseover", function() {
+    alert ("pasaste por encima campeon ")
+}
+)
+
+
+//EVENTOS CON TECLADO 
+
+keydown y keyup => cuando se presiona una tecla y cuando se deja soltar 
+
+let campoTexto = document.getElementById('campoTexto');
+
+campoTexto.onkeydown = ()=>{
+    console.log('presionaste una tecla KD')
+}
+campoTexto.onkeyup = () =>{
+    console.log('soltaste una tecla KP ')
+}
+
+Existe una etiqueta llamada CANVAS dentro de html que nos permite dibujar 
+Existe una etiqueta llamada select que nos permite seleccionar distintas opciones en un formulario
+
+
+const pizzarita = document.getElementById("pizzarita");
+const contexto = pizzarita.getContext ("2d");
+let dibujando = false;
+
+
+Ejemplo PROFE
+
+//evento mouse para dibujar
+
+pizzarita.addEventListener('mousedown',function(event){
+  dibujando: true;
+  dibujar(event.pageX - pizzarita.offsetLeft, event.pageY - pizzarita.offsetTop);
+
+});
+
+pizzarita.addEventListener('mousemove',function(event){
+  if (dibujando){
+    dibujar(event.pageX - pizzarita.offsetLeft, event.pageY - pizzarita.offsetTop);
+  
+  }
+})
+
+pizzarita.addEventListener('mouseup', function(){
+  dibujando = false
+})
+
+function dibujar (x, y){
+  contexto.fillstyle = 'black';
+  contexto.fillRect (x,y,5,5);
+}
+
+document.addEventListener('keydown',function(event){
+  if (event.key === "delete"){
+    contexto.clearRect(0,0, pizzarita.width, pizzarita.height)
+  }
+})
+
+
+
+
+CHANGE   = evento que nos permite modificar valores 
+
+let seleccion = document.getElementById('seleccion');
+let contenido = document.getElementById("contenido");
+
+seleccion.addEventListener('change',function(){
+  if (this.value === "opcion 2"){
+    contenido.textContent = "se selecciono la opcion 2"
+  }
+})
+
+
+
+
+//traer los diferentes inputs
+
+Crea un formulario y crea 3 labels  con 3 inputs 
+<label for = nombre >nombre:</label>
+<input type = "text" id ="nombre" required>
+<label for = apellido >apellido:</label>
+<input type = "text" id ="apellido" required>
+<label for = email >email:</label>
+<input type = "text" id =email" required>
+
+CREO  UN SPAN PARA EL ERROR
+
+<span id = "emailError" style= "display: none;">ingrese un correo valido</span> 
+
+
+
+
+let nombreInput = document.getElementById("nombre");
+let apellidoInput = document.getElementById("apellido");
+let emailInput = document.getElementById("email");
+let emailError = document.getElementById("emailError");
+
+emailInput.addEventListener("input",function(){
+  if (!this.validity.valid){
+    emailError.style.display = 'block';
+  }else{
+    emailError.style.display = 'none';
+  }
+})
+
+let registroForm = document.getElementById("registroForm");
+
+registroForm.addEventListener("sumbmit",function(event){
+  if(!nombreInput.validity.valid || !apellidoInput.validity.valid || !emailInput.validity.valid){
+    alert("ingrese su nombre bien por favor")
+  
+  if(!apellidoInput.validity.valid){
+    alert("ingrese su apellido bien por favor")
+  }
+  if(!emailInput.validity.valid){
+    emailError.style.display = "block";
+    alert("ingresa tu mail bien por favor")
+  }
+  event.preventDefault();
+  }else{
+    alert("registro aprobado")
+  }
+})
+
+--------------------------------------------------------------------------------------------------------
+
+
+ APARTADO  DE STORAGE & JSON:
+
+
+ El objeto Storage (API de almacenamiento web) permite almacenar datos de manera local en el navegador
+ sin necesidad de realizar ninguna conexion con el servidor.
+ De esta manera, cada cliente puede preservar  informacion de la aplicacion.
+
+ El navegador nos ofrece 2 tipos de storage : LOCAL STORAGE Y SESIONSTORAGE.
+
+ localstorage => la info se va a guardar en el navegador de forma indefinida.
+ Cuando cerramos el navegador y lo volvemos a abrir, permanecen los cambios
+
+ sesionstorage => la info se guarda de forma temporal. Los datos almacenados los vamos a mantener,
+ siempre y cuando tengamos el navegador abierto.
+
+
+ como maximo 5 megas de almacenamiento
+ get item => es el metodo con el cual nosotros vamos a recuperar el valor asociado a las llaves.
+
+ let saludo = localstorage.getItem("numero");
+ let numero = parseint(saludo);
+ console.log(typeof numero);
+
+
+ const modo = document.getElementById("modo");
+ modo.addEventListener("click",()=>{
+  document.body.classList.toggle("dark");
+  //document.body = aca accedemos a los elementos html en body
+  //classlist = propiedad con la que accedemos a CSS
+  //toggle= metodo con el cual cambiamos los estados.
+  if (document.body.classList.contains("dark")){
+    localStorage.setItem("modo","dark")
+  }else{
+    localStorage.setItem("modo","claro");
+  }
+  //contains = es verificar si el nombre de una clase esta presente en el elemento
+ })
+
+  recuperar esa informacion
+  const bodyModo = localStorage.getItem("modo")
+  
+  if(bodyModo === "dark"){
+    document.body.classList.add("dark");
+  }
+  else{
+    document.body.classList.remove("dark");
+  }
+
+ //removeitem => es elimniar especificamente un elemento almacenado. a travez de su clave.
+
+//clear => elimina todo los elementos almacenados en el local.
+
+localStorage.clear()
+
+
+
+
+
+JSON => javascript object notation, formato de intercambio de datos que tiene una sintaxis
+ligera y facil de leer.
+json convierne datos en strings.
+
+Stringify => Con jason.sringyfy podemos transformar un objeto javascript a string en forma JSON.
+
+let persona = {nombre: "pedro", edad:25, ciudad:"mar del plata"};
+const personaJSON = JSON.stringify(persona)
+
+localStorage.setitem("persona", personaJSON);
+
+const usuarioEnElLocal = localStorage.getItem("persona");
+console.log(usuarioEnElLocal)
+
+Json.parse => convierte Json, de string a objeto.
+
+const usuarioObjeto = JSON.parse(usuarioEnElLocal);
+console.log(usuarioObjeto);
+
+
+esta linea de codigo lo que hace es redireccionarnos a otro html
+window.location.href = "sesion html"
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+  OPERADORES AVANZADOS 1
+
+
+  ? => if
+  : => else 
+
+
+condicion a evaluar ? condicion en true : condicion en false
+
+edadcliente >= 18 ? console.log("es mayor") : console.log("es menor")
+
+operador logico and  &&    y or   || => operadores de corto circuito
+
+
+
+operador logico and && => trabaja con operaciones booleanas.
+
+
+OR => lo podemos utilizar para predefinir un mensaje en caso de que retorne verdadera la condicion.
+OR => es sintacticamente similar al anterior, con la diferencia que consta de dos operadores
+y no de una condicion explicita :
+
+operando1 || operando2.
+
+
+  => Si no es falsy (si es distinto de 0, null, undefined, NaN, false o string vacio) el operador or ( || )
+  retorna operador1.
+  De lo contrario, retorna operador 2
+
+  TABLA DE EVALUACION DE VALORES FALSY :
+
+
+  console.log(0 || "Falsy")  // Falsy
+
+  console.log(40 || "Falsy")  // 40
+
+  console.log(Null|| "Falsy")  // Falsy
+
+  console.log(undefined || "Falsy")  // Falsy
+
+  console.log("Hola Mundo" || "Falsy")  // Hola Mundo
+
+  console.log("" || "Falsy")  // Falsy
+
+  console.log(NaN || "Falsy")  // Falsy
+
+  console.log(true || "Falsy")  // true
+
+  console.log(false || "Falsy")  // Falsy
+
+
+Operador Nullish coalescing :
+
+
+Este operador ( ?? ) funciona igual que el operador OR ( || ),
+con la diferencia que admite mas valores como 'verdaderos'.
+En este caso, solo obtenemos nullish en dos casos:
+
+console.log(0 ?? "Nullish") // 0
+
+console.log(40 ?? "Nullish") // 40
+
+console.log(null ?? "Nullish") // Nullish
+
+console.log(undefined ?? "Nullish") // Nullish
+
+console.log("Hola Mundo" ?? "Nullish") // Hola Mundo
+
+console.log("" ?? "Nullish") // ""
+
+console.log(NaN ?? "Nullish") // NaN
+
+console.log(true ?? "Nullish") // true
+
+console.log(false ?? "Nullish") // false
+
+
+
+encadenamiento opcional o   opcional chaining 
+
+forma segura que vamos a tener de acceder a propiedades de un objeto sin generar errores
+null y undefined   (   ?.   )
+
+
